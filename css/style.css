@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red : #9C0725 ;
+    --white : #FFFFFF;
+    --black : #030303 ;
+}
+body{
+    background-color: var(--black);
+    overflow: hidden;
+    
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+     
+main{
+    display: flex;
+    width: 100%;
+}
+nav{
+    width: 8%;
+    height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 360px;
+}
+nav h1{
+    font-family: "Inter", sans-serif;
+    color: var(--red);
+    transform: rotate(90deg);
+    width: 500px;
+    text-transform: uppercase;
+    font-size: 15px;
+    word-spacing: 10px;
+    letter-spacing: 10px;
+}
+section ul{
+    font-family: "Squada One", sans-serif;
+    color: var(--white);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 30px;
+    
+}
+li{
+    transition: all 0.5s;
+    position: relative;
+    font-size: 22px;
+}
+
+li::before{
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: var(--red);
+    position: absolute;
+    bottom: -1px;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+li:hover::before{
+    width: 100%;
+    transition: all 0.5s;
+}
+li:hover{
+    color: var(--red);
+    cursor: pointer;
+}
+section{
+    width: 100%;
+    padding: 0 40px;
+}
+.main-content{
+    margin-top: 70px;
+}
+.txt{
+    font-family: "Poppins", sans-serif; 
+}
+.txt h1{
+    color: var(--white);
+    font-size: 100px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.txt h1 span{
+    color: var(--red);
+}
+.txt h3{
+    color: var(--white);
+    font-style: italic;
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.txt h2{
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 50px;
+}
+.txt p{
+    color: var(--white);
+    font-size: 12px;
+    line-height: 25px;
+    margin-top: 30px;
+}
+.txt button{
+    background-color: var(--red);
+    border: none;
+    color: var(--white);
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin-top: 80px;
+}
+.main-content {
+    display: flex;
+}
+.main-content {
+    position: relative;
+}
+.main-content img{
+    width: 850px;
+    right: 100px;
+    position: absolute;
+    top: -40px;
+    z-index: 30;
+}
+.animate__fadeInLeft {
+    background-color: #030303;
+}
+.circle{
+    position: absolute;
+    right: 100px;
+    opacity: 0;
+    animation: ChangeOpacity infinite 1s alternate forwards;
+}
+@keyframes ChangeOpacity {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+/* font-family: "Squada One", sans-serif;
+font-family: "Inter", sans-serif;
+font-family: "Poppins", sans-serif; */
